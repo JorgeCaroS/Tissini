@@ -3,13 +3,13 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Catalogo from "../catalogo/Catalogo";
 import Categorias from "../categorias/Categorias";
 import Carrito from "../carrito/Carrito";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 function Main() {
     return (
       <BrowserRouter>
-        <header>
-          <h1> Header </h1>
-        </header>
+        <Header/>
         <Switch>
           <Route path="/catalogo">
             <Catalogo />
@@ -23,9 +23,7 @@ function Main() {
             <Carrito />
           </Route>
         </Switch>
-        <footer>
-          <h1> Footer </h1>
-        </footer>
+        <Footer/>
       </BrowserRouter>
     );
   }

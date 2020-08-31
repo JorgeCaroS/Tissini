@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 footer {
@@ -48,4 +49,52 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: right;
+}
+
+.background-login {   
+  text-align: center;  
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: url("https://mitienda.moda/img/login-desktop.0a0cacb5.jpg");
+}
+
+.form-container {
+  position: absolute;
+  right: auto;
+  left: auto;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: transparent;
+  border: solid;
+  color: white;
+}
+
+.btn-form {
+    color:white;
+    background-color: black;
+}
+
+
+.test{
+    display:flex;
+    justify-content:center;
+}
+
+span{
+    color:rgb(230, 166, 177);
+    font-size: large;
+    font-style: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

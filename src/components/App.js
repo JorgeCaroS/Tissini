@@ -7,12 +7,14 @@ import Main from "./main/Main";
 class App extends Component {
   state = {
     user: false,
+    categorias:[]
   };
 
   componentDidMount() {
     getAllCategorias().then((data) => {
       
       console.log("all categorias: ", data);
+      this.setState({categorias:data})
     });
   }
 
@@ -29,7 +31,8 @@ class App extends Component {
 
   render() {
     //const logged = false;
-    return this.state.user ? <Main /> : <Login onLogin={this.handleOnLogin} />;
+    console.log(this.state.categorias)
+    return this.state.user ? <Main categorias={this.state.categorias}/> : <Login onLogin={this.handleOnLogin} />;
   }
 }
 

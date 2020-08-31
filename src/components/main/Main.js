@@ -1,5 +1,12 @@
-import React,{Component} from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import React, { Component } from "react";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect,
+  withRouter,
+} from "react-router-dom";
+
 import Catalogo from "../catalogo/Catalogo";
 import Categorias from "../categorias/Categorias";
 import Carrito from "../carrito/Carrito";
@@ -8,15 +15,13 @@ import Footer from "../footer/Footer";
 
 //  function Main() {
 class Main extends Component {
-
-    state = {       
-        categorias:[]
-      };
+  state = {
+    categorias: [],
+  };
   componentDidMount() {
-      
-      const categorias = this.props.categorias;
-      this.setState({categorias:categorias})
-      console.log(categorias)
+    const categorias = this.props.categorias;
+    this.setState({ categorias: categorias });
+    console.log(categorias);
   }
 
   render() {
@@ -33,7 +38,7 @@ class Main extends Component {
           </Route>
 
           <Route path="/categorias">
-            <Categorias categorias={this.props.categorias}/>
+            <Categorias categorias={this.props.categorias} />
           </Route>
 
           <Route path="/carrito">

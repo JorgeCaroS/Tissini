@@ -6,7 +6,7 @@ class Categoria extends React.Component {
   handleCategoria = () => {
     const { handleClick } = this.props;
     const nombreCategoria = this.props;
-    const linkCategoria = this.props;
+    const linkCategoria = this.props.source;
 
     handleClick(linkCategoria, nombreCategoria);
 
@@ -14,11 +14,12 @@ class Categoria extends React.Component {
   };
 
   render() {
+      console.log(this.props.source)
     return (
       <React.Fragment>
         <div className="single-categoria">
           <img
-            src={this.props}
+            src={this.props.source}
             alt={this.props}
             onClick={this.handleCategoria}
             ref={this.myRef}

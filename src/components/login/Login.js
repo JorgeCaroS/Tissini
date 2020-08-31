@@ -1,17 +1,25 @@
 import React, { useState } from "react";
+import { BrowserRouter, Route, Switch, Redirect, withRouter,browserHistory  } from "react-router-dom";
 
 // const [userData, setUserData] = useState("");
 
-export default class Login extends React.Component {
+ class Login extends React.Component {
   userInput = React.createRef();
 
   handleUserLogin = () => {
     const userId = this.userInput.current.value;
     this.props.onLogin(userId);
+    
+    console.log(this);
+    //this.props.history.push("/categorias");
     // console.log("user ID: ", userId, userId.value);
   };
 
+  
+
   render() {
+    
+    
     return (
       <div>
         <div className="background-login">
@@ -40,4 +48,8 @@ export default class Login extends React.Component {
       </div>
     );
   }
+
 }
+
+
+export default Login;

@@ -10,21 +10,32 @@ body {
 
 footer {
   position: absolute;
-  padding: 20px;
+  padding: 0px;
   width: 100%;
   bottom: 0;
 }
 
-.footer-div {
+/* .footer-div {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: red;
+} */
+
+.footer-div {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+
+  background-color: rgb(241, 235, 235);
 }
 
 .footer-icons {
-  width: 400px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -37,11 +48,20 @@ footer {
   padding: 10px;
 }
 
-.header-div {
+/* .header-div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  background-color: red;
+ 
+} */
+
+.header-div {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgb(241, 235, 235);
 }
 
 .header-icons {
@@ -51,8 +71,8 @@ footer {
   align-items: right;
 }
 
-.background-login {   
-  text-align: center;  
+.background-login {
+  text-align: center;
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -82,19 +102,32 @@ input {
 }
 
 .btn-form {
-    color:white;
-    background-color: black;
+  color: white;
+  background-color: black;
 }
 
-
-.test{
-    display:flex;
-    justify-content:center;
+.test {
+  display: flex;
+  justify-content: center;
 }
 
-span{
-    color:rgb(230, 166, 177);
-    font-size: large;
-    font-style: normal;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+span {
+  color: rgb(230, 166, 177);
+  font-size: large;
+  font-style: normal;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
+
+.categoriadiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.categoriadiv IMG {
+    display: flex;
+    width: 95%;
+  
+  }

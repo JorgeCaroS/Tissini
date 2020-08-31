@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+
+import { BrowserRouter, Route, Switch, Redirect, withRouter } from "react-router-dom";
 import Login from "./login/Login";
 import { postData } from "../api/index";
 import { validateUser, getAllCategorias } from "../api";
 import Main from "./main/Main";
 
-class App extends Component {
+class App extends React.Component {
   state = {
     user: false,
     categorias:[]
@@ -30,9 +32,9 @@ class App extends Component {
   };
 
   render() {
-    //const logged = false;
+    
     console.log(this.state.categorias)
-    return this.state.user ? <Main categorias={this.state.categorias}/> : <Login onLogin={this.handleOnLogin} />;
+    return this.state.user ? <Main categorias={this.state.categorias}/> : <Login history={this.props.history} onLogin={this.handleOnLogin} /> ;
   }
 }
 

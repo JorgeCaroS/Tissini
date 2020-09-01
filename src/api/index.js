@@ -40,4 +40,15 @@ export async function postData(url = "", data = {}) {
             return null;
         } 
   } 
+
+  export async function getAllCatalogos() {
+    try {
+      
+        const response = await fetch("https://api.tissini.app/api/v2/categories/1/products")
+        return response.json(); 
+      } catch (err) {
+          console.log("error fetching: ", err);
+          return null;
+      } 
+} 
   

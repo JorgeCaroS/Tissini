@@ -26,6 +26,7 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
+  z-index: 1 ;
 
   background-color: rgb(241, 235, 235);
 }
@@ -37,6 +38,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer-icons :hover {
+  color: red;
 }
 
 .single-icon {
@@ -54,7 +59,7 @@ footer {
   align-items: center;
   flex-direction: row;
   background-color: red;
- 
+
 } */
 
 .header-div {
@@ -62,6 +67,7 @@ footer {
   width: 100%;
   top: 0;
   background-color: rgb(241, 235, 235);
+  z-index: 1 ;
 }
 
 .header-icons {
@@ -123,11 +129,101 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 70px;
+}
+
+.catalogodiv {
+  display: flex;
+  left: 0;
+  height: 20vh;
+  min-height: 50vh;
+  width: 100vw;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  position: absolute; /*new*/
+  /* border: solid red;*/
+  overflow-x: hidden;
 }
 
 .categoriadiv IMG {
+  display: flex;
+  width: 95%;
+}
+
+.catalogodiv IMG {
+  width: 90%;
+}
+
+/* .single-banner {
     display: flex;
-    width: 95%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+
+  }   */
+
+#goLeft {
+  position: absolute;
+  top: 35%;
+  left: 0%;
+  transform: translateY(-50%);
+  width: 5%;
+  height: 10%;
+  background: none;
+  overflow: hidden;
+  background: transparent;
+  background-color: pink;
+  border: solid transparent;
+}
+
+#goRight {
+  position: absolute;
+  top: 35%;
+  right: 0%;
+  transform: translateY(-50%);
+  width: 5%;
+  height: 10%;
+  background: none;
+  overflow: hidden;
+  background: transparent;
+  background-color: pink;
+  border: solid transparent;
+}
+
+
+.gallery{
+  position: absolute;  
+  height: 100vh;
+  margin-top: 500px;
+  width: 100%;
+  margin-bottom: 100px;
+  align-content: center;
+
+}
+
+.single-categoria{
+  margin-top: 200px;
+  display:flex;
+  height: 50vh;
+  width: 50vw;
+  align-items: center;
+  justify-content: center;
+  padding:10%;
   
-  }
+}
+
+
+.single-catalogo{
+  
+  display:flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  padding:10%;
+  
+}

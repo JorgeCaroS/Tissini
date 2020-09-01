@@ -1,14 +1,20 @@
 import React from "react";
+import "../banner.scss";
 
-class Categoria extends React.Component {
+class Banner extends React.Component {
+  state = {
+    categorias: [],
+    x: 0,
+  };
   myRef = React.createRef();
 
-  
   render() {
-     // console.log(this.props.source)
     return (
       <React.Fragment>
-        <div className="single-categoria">
+        <div
+          className="single-banner"
+          style={{ transform: `translateX(${this.props.x}%)` }}
+        >
           <img
             src={this.props.source}
             alt={this.props}
@@ -16,8 +22,8 @@ class Categoria extends React.Component {
             ref={this.myRef}
             link={this.props}
           />
+
           <br></br>
-          
           <br></br>
         </div>
       </React.Fragment>
@@ -25,4 +31,4 @@ class Categoria extends React.Component {
   }
 }
 
-export default Categoria;
+export default Banner;

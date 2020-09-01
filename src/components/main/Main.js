@@ -17,6 +17,7 @@ import Footer from "../footer/Footer";
 class Main extends Component {
   state = {
     categorias: [],
+    catalgo: [],
   };
   componentDidMount() {
     const categorias = this.props.categorias;
@@ -34,7 +35,10 @@ class Main extends Component {
           </Route>
 
           <Route path="/catalogo">
-            <Catalogo />
+            <Catalogo
+              categorias={this.props.categorias}
+              catalogo={this.props.catalogo}
+            />
           </Route>
 
           <Route path="/categorias">
